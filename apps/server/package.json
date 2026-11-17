@@ -11,5 +11,9 @@
   },
   "peerDependencies": {
     "typescript": "^7"
+  },
+  "dependencies": {
+    "@repo/db": "*",
+    "dotenv": "^18.0.10"
   }
 }
