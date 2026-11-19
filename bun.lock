@@ -18,6 +18,7 @@
       "name": "server",
       "dependencies": {
         "@repo/db": "*",
+        "@repo/zod": "*",
         "bcrypt": "^6.0.0",
         "cookie-parser": "^1.4.7",
         "cors": "^2.8.6",
@@ -96,6 +97,19 @@
         "@types/react-dom": "19.2.5",
         "eslint": "10.9.1",
         "typescript": "7.0.2",
+      },
+    },
+    "packages/zod": {
+      "name": "@repo/zod",
+      "dependencies": {
+        "zod": "^4.6.7",
+      },
+      "devDependencies": {
+        "@repo/typescript-config": "*",
+        "@types/bun": "latest",
+      },
+      "peerDependencies": {
+        "typescript": "^7",
       },
     },
   },
@@ -311,6 +325,8 @@
     "@repo/typescript-config": ["@repo/typescript-config@workspace:packages/typescript-config"],
 
     "@repo/ui": ["@repo/ui@workspace:packages/ui"],
+
+    "@repo/zod": ["@repo/zod@workspace:packages/zod"],
 
     "@standard-schema/spec": ["@standard-schema/spec@1.1.0", "", {}, "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="],
 
