@@ -159,6 +159,25 @@ body {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
+.chat-bubble-received {
+  background-color: rgba(26, 36, 47, 0.6);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.chat-bubble-sent {
+  background-color: rgba(48, 140, 232, 0.9);
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -180,4 +199,23 @@ body {
   100% {
     transform: translateX(-50%);
   }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes chat-widget-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-chat-widget-in {
+  animation: chat-widget-enter 0.3s ease-out forwards;
 }

@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, BookOpen } from "lucide-react";
+import { useChatWidget } from "@/contexts/ChatWidgetContext";
 
 export function CTASection() {
+  const { openChat } = useChatWidget();
   return (
     <section className="py-24 px-4 relative overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0 bg-grid-pattern opacity-50" />
@@ -20,7 +22,7 @@ export function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
-            // todo
+            onClick={openChat}
             className="bg-primary text-white! hover:bg-white hover:text-black! px-8 py-4 rounded font-bold uppercase tracking-widest whitespace-nowrap flex items-center gap-2"
           >
             <MessageCircle className="size-5" />

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Package, ShoppingBag, FileText, Droplets, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useChatWidget } from "@/contexts/ChatWidgetContext";
 
 const USE_CASES = [
   {
@@ -27,7 +28,7 @@ const USE_CASES = [
 ];
 
 export function InfoSection() {
-
+    const { openChat } = useChatWidget();
   return (
     <section className="py-44 pb-8 px-4 md:px-12 relative z-10">
       <div className="max-w-6xl mx-auto">
@@ -72,7 +73,7 @@ export function InfoSection() {
         </div>
         <div className="flex flex-wrap justify-center gap-4">
           <Button
-            // todo
+            onClick={openChat}
             className="bg-primary text-white! hover:bg-white hover:text-black! flex items-center gap-2"
           >
             Try the chat

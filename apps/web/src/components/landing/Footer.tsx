@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { X, Globe, BoxesLinkedIcon } from "lucide-react";
+import { useChatWidget } from "@/contexts/ChatWidgetContext";
 
 const SHOP_LINKS = [
   { label: "All Products", href: "/products" },
@@ -27,7 +28,7 @@ const SOCIAL_LINKS = [
 ];
 
 export function Footer() {
-
+  const { openChat } = useChatWidget();
   return (
     <footer className="border-t border-neutral-border bg-background-dark pt-16 pb-8 px-8 md:px-16">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
@@ -92,7 +93,7 @@ export function Footer() {
             <li>
               <button
                 type="button"
-                // todo
+                onClick={openChat}
                 className="text-primary hover:text-primary/75 cursor-pointer transition-colors"
               >
                 Try the AI

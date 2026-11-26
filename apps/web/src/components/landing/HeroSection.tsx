@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen } from "lucide-react";
+import { useChatWidget } from "@/contexts/ChatWidgetContext";
 
 const BOTTLE_IMAGE =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuB-h0t99RJJwyDTUsALkiqSzEB6lH003fKBgH6pyjSfpk0Va1DbkBVZKHgcXEdj2Wd2adTNpUYKxRXUe_lmElt8Ay_1AS36pkbAzHyTQ5uC10tJ1PnigtJWcxVKj2vlOMIegBnOXYVvI88-WX6ceEFmEwJVellhCa5Q0AplnZn9gmAUs5T9Ap5Ue0b4k3RmDeWgHuDpChQ0aeaF58n6I0mcaNIUgzoBm0Ikth_Wk-TI2Ghc1xKDxuK_vySJQc9YgdE_4SbH8DMomoE";
 
 export function HeroSection() {
-
+    const { openChat } = useChatWidget();
   return (
     <section className="relative z-10 pt-24 px-4 pb-4 md:px-8 md:pb-8 lg:pt-12 lg:px-12 lg:pb-12 min-h-screen flex flex-col justify-center">
       <div className="absolute top-6 right-6 md:top-8 md:right-8 z-50 flex items-center gap-6 text-xs tracking-widest text-gray-400 font-medium">
@@ -48,7 +49,7 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                // todo
+                onClick={openChat}
                 className="bg-primary text-white! hover:bg-white hover:text-black! px-8 py-4 rounded font-bold uppercase tracking-widest transition-all duration-300 flex items-center gap-2 group-hover:pl-10"
               >
                 Try the AI
@@ -79,7 +80,7 @@ export function HeroSection() {
           </div>
           <button
             type="button"
-            // todo
+            onClick={openChat}
             className="absolute bottom-6 left-6 flex items-center gap-2 text-left hover:opacity-80 transition-opacity"
           >
             <span className="w-1.5 h-1.5 bg-primary rounded-full" />
