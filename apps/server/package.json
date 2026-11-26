@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "typecheck": "bun check",
-    "build": "tsc -b"
+    "build": "tsc -b",
+    "dev": "bun src/index.ts"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
