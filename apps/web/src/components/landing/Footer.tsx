@@ -131,14 +131,14 @@ export function Footer() {
         <div>
           Made by{" "}
           <a
-            href="https://hrsht.me"
+            href="https://araina.in"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-primary transition-colors"
           >
-            Harshit
+            Aman
           </a>{" "}
-          — © 2024 ARCTIC.
+          — © 2026 ARCTIC.
         </div>
         <div className="flex gap-6">
           <Link to="#" className="hover:text-white transition-colors">
